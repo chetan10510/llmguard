@@ -3,6 +3,12 @@ import faiss
 import torch
 import numpy as np
 import os
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+model_id = "Tuathe/llmguard-injection-model"
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+model = AutoModelForSequenceClassification.from_pretrained(model_id)
+
 
 class FAISSInjectionDetector:
     def __init__(self, prompt_file_path='data/injection_prompts.txt', threshold=0.8):

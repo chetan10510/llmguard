@@ -1,30 +1,30 @@
-# Python
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Environment
+# Virtual environment
+venv/
+.env/
 .venv/
-env/
-*.env
 
-# VS Code
-.vscode/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Model + datasets
+# Model training checkpoints (keep only final model if needed)
+model/injection_classifier/checkpoint-*/
 *.pt
 *.pth
-*.bin
-*.safetensors
-*.csv
-*.json
-*.tsv
-*.ckpt
-model/injection_classifier/
-model/injection_classifier/checkpoint-*/
-model/injection_classifier/checkpoint-12/
-data/
+
+# Logs
+logs/
+*.log
+
+# Datasets (if not needed in Space)
+data/*.csv
+data/*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hugging Face build cache
+.hf_cache/
