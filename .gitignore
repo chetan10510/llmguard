@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.venv/
+env/
+*.env
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model + datasets
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.csv
+*.json
+*.tsv
+*.ckpt
+model/injection_classifier/
+model/injection_classifier/checkpoint-*/
+model/injection_classifier/checkpoint-12/
+data/
